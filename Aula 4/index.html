@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        container {
+            display: grid;
+            grid-template-areas: 
+                "box1 box1" 
+                "box2 box3"
+                "box4 box5";  
+            gap: 10px;
+        }
+        .box{
+            padding: 10px;
+            margin: 10px;
+            text-align: left;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #box1{
+            grid-area: box1;
+            background-color: lightblue;
+        }
+        #box2{
+            grid-area: box2;
+            background-color: lightgreen;
+        }
+        #box3{
+            grid-area: box3;
+            background-color: lightcoral;
+        }
+        #box4{
+            grid-area: box4;
+            background-color: lightsalmon;
+        }
+        #box5{
+            grid-area: box5;
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+<body>
+     <h1>Formulário</h1>
+
+     <div class="container">
+        <!-- Formulário principal -->
+        <div class="box" id="box1">
+        <form>
+             <label for="nome"><b>Nome:</b></label>
+            <input type="text" id="nome" name="nome" placeholder="Nome Completo" required minlength="3">
+        
+             <label for="cpf"><b>CPF:</b></label>
+            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required maxlength="11">
+
+             <label for="dataNascimento">Data Nascimento:</label>
+             <input type="date" id="dataNascimento" name="dataNascimento"> 
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" min="1" max="110">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@exemplo.com">
+
+            <label for="tel"><b>Telefone:</b></label>
+            <input type="tel" id="tel" name="tel" placeholder="(00) 00000-0000" required maxlength="11">
+
+            <button type="submit">Enviar</button>
+
+         </form>
+    </div>
+
+    <div class="box" id="box2">
+        <form>
+            <label for="user"><b>Usuário:</b></label>
+            <input type="text" id="user" name="user" placeholder="Usuário" required>
+
+            <label for="password"><b>Senha:</b></label>
+            <input type="password" id="password" name="password" required placeholder="Senha">
+
+            <button type="submit">Acessar</button>
+
+        </form> 
+    </div>
+
+    <div class="box" id="box3">
+        <form>
+            <label for="sexo">Selecione o sexo:</label>
+            <select name="sexo" id="sexo">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select><br> 
+        </form>
+    </div>
+
+    <div class="box" id="box4">
+        <form>
+            <label for="listaCompras">Lista de Compras:</label> <br>
+            <input type="checkbox" name="fruta" value="Maça">Maça
+            <input type="checkbox" name="fruta">Banana 
+        </form>
+    </div>
+
+    <div class="box" id="box5">
+        <form>
+            <label for="atividades">Atividades</label><br>
+            <input type="radio" name="atividades" value="Correr">Correr
+            <input type="radio" name="atividades" value="Estudar">Estudar
+        </form>
+    </div>
+    
+</body>
+</html>
