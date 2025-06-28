@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galeria de Filmes</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>Galeria de Filmes</h1>
+  <div class="filtros">
+    <button class="filtro" data-genero="Todos">Todos</button>
+    <button class="filtro" data-genero="Ação">Ação</button>
+    <button class="filtro" data-genero="Drama">Drama</button>
+    <button class="filtro" data-genero="Suspense">Suspense</button>
+    <button id="limpar">Limpar filtros</button>
+  </div>
+
+  <input type="text" id="busca" placeholder="Buscar filmes pelo título..." />
+</header>
+
+<main>
+  <div id="galeria" class="galeria"></div>
+</main>
+
+<div id="popup" class="popup">
+  <div class="popup-conteudo">
+    <button id="fechar">&times;</button>
+    <h2 id="popup-titulo"></h2>
+    <div id="popup-detalhes"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
